@@ -21,3 +21,17 @@ class ListaSE:
       nuevoNodo.siguiente = self.primerElemento
       self.primerElemento = nuevoNodo
 
+  #Verifica si el primer elemento/cabeza de la lista está vacio, si es así la lista está vacia igualmente 
+  def EstaVacia (self):
+    return self.primerElemento == None
+
+  #Cuenta la cantidad de elementos de la lista
+  def CantidadElementos(self):
+    contador = 0
+    nodo = self.primerElemento
+    while nodo is not None:
+      if nodo.data is not None:
+        contador += 1
+      else:
+        contador = contador
+    return contador
