@@ -38,7 +38,7 @@ class ListaSE:
 # buscar un elemento por su valor
 def existe(nodo, busqueda):
     while nodo != None:
-        if nodo.dato == busqueda:
+        if nodo.valor == busqueda:
             return True
         nodo = nodo.siguiente
     return False 
