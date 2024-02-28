@@ -1,0 +1,23 @@
+class Nodo:
+  def __init__(self, valor):
+    self.data = valor
+    self.siguiente = None
+
+class ListaSE:
+  def __init__(self):
+    self.primerElemento = None
+  
+  def AgregarInicio(self, valorAgregar):
+    nuevoNodo = Nodo(valorAgregar)
+    #valdiamos si el primer elemento es nulo o vacio
+
+    #Y este nuevo nodo será el primer elemento
+    if self.primerElemento is None:
+      self.primerElemento = nuevoNodo
+      return
+
+    #Si ya hay un elemento, ese primer elemento será el apuntador
+    else:
+      nuevoNodo.siguiente = self.primerElemento
+      self.primerElemento = nuevoNodo
+
