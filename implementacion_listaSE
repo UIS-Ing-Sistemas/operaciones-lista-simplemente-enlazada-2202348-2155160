@@ -35,3 +35,10 @@ class ListaSE:
       else:
         contador = contador
     return contador
+# buscar un elemento por su valor
+def existe(nodo, busqueda):
+    while nodo != None:
+        if nodo.dato == busqueda:
+            return True
+        nodo = nodo.siguiente
+    return False 
